@@ -65,18 +65,23 @@ def drop3(event):
     photo_label3.configure(image=de)
     photo_label3.image = de
     test_count_start += 1
-    
+
+def doReset():
+    path_entry.delete(0, END)
+    path_entry.insert(0, "")
+
 path_label = Label(master, text='Path to save', fg='black')
 path_entry = Entry(master)
 # name_label = Label(master, text='Name start from', fg='black')
 # name_entry = Entry(master)
 B1 = Button(master, text ="OK", command=doSomething)
-
+B2 = Button(master, text="Reset", command=doReset)
 path_label.grid(row=0,column=0, sticky=W, padx=10)
 path_entry.grid(row=1, column=0, sticky=W, padx=10)
 # name_label.grid(row=2,column=0, sticky=W, padx=10)
 # name_entry.grid(row=3,column=0, sticky=W, padx=10)
 B1.grid(row=4,column=0, sticky=W, padx=10)
+B2.grid(row=4,column=1, sticky=W, padx=10)
 
 Label(master, text="cloth").grid(row=5, column=0, padx=10)
 Label(master, text="image").grid(row=5, column=1, padx=10)

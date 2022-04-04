@@ -4,6 +4,8 @@
 
 `conda create -y -n pygui python=3.8`
 
+`conda activate pygui`
+
 `pip install tk`
 
 `pip install tkinterdnd2`
@@ -14,5 +16,14 @@
 
 Clone the github repo and cd to project folder.
 
-`git clone `
+`git clone https://github.com/ansarker/pygui`
+
 `cd pygui`
+
+### Run
+
+`pwd` to your file saving directory and copy the path.
+
+![paste file saving directory path on the text field](./pygui.png)
+
+Then just drag and drop...
