@@ -18,6 +18,8 @@ Clone the github repo and cd to project folder.
 
 ### Run
 
+`python main.py`
+
 `pwd` to your file saving directory and copy the path.
 
 ![paste file saving directory path on the text field](./pygui.png)
