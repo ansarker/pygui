@@ -14,10 +14,11 @@ default_img_2 = 'image.jpg'
 default_img_3 = 'test.jpg'
 
 global cloth_count_start
-cloth_count_start = 1
 global image_count_start
-image_count_start = 1
 global test_count_start
+
+cloth_count_start = 1
+image_count_start = 1
 test_count_start = 1
 
 def doSomething():
@@ -38,7 +39,7 @@ def img_resize(src):
 
 def drop1(event):
     global cloth_count_start
-    dest = os.path.join(path_entry.get(), 'cloth', f'000000{cloth_count_start}.jpg')
+    dest = os.path.join(path_entry.get(), 'cloth', f'{format(cloth_count_start, "07d")}.jpg')
     copy(event.data, dest)
     print(f'INFO: copied to {dest}')
     de = img_resize(event.data)
@@ -48,7 +49,7 @@ def drop1(event):
 
 def drop2(event):
     global image_count_start
-    dest = os.path.join(path_entry.get(), 'image', f'000000{image_count_start}.jpg')
+    dest = os.path.join(path_entry.get(), 'image', f'{format(image_count_start, "07d")}.jpg')
     copy(event.data, dest)
     print(f'INFO: copied to {dest}')
     de = img_resize(event.data)
@@ -58,7 +59,7 @@ def drop2(event):
 
 def drop3(event):
     global test_count_start
-    dest = os.path.join(path_entry.get(), 'test', f'000000{test_count_start}.jpg')
+    dest = os.path.join(path_entry.get(), 'test', f'{format(test_count_start, "07d")}.jpg')
     copy(event.data, dest)
     print(f'INFO: copied to {dest}')
     de = img_resize(event.data)

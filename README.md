@@ -6,11 +6,7 @@
 
 `conda activate pygui`
 
-`pip install tk`
-
-`pip install tkinterdnd2`
-
-`pip install pillow`
+`pip install tk tkinterdnd2 pillow`
 
 ### Usage
 
